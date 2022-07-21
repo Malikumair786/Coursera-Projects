@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 30px;
+}
+
+.boxes {
+    display: flex;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .boxes {
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        'first second third'
+        ;
+    }
+
+    
+    .box{
+        width: fit-content;
+    }
+    #first {
+        grid-area: first;
+    }
+
+    #second {
+        grid-area: second;
+
+    }
+
+    #third {
+        grid-area: third;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1199px) {
+    .boxes {
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            'first second'
+            'third third';
+    }
+
+    .box{
+        width: fit-content;
+    }
+    #first {
+        grid-area: first;
+    }
+
+    #second {
+        grid-area: second;
+    }
+
+    #third {
+        grid-area: third;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 767px) {
+    .boxes {
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            'first'
+            'second'
+            'third';
+
+    }
+    
+    .box{
+        width: fit-content;
+    }
+
+    #first {
+        grid-area: first;
+    }
+
+    #second {
+        grid-area: second;
+    }
+
+    #third {
+        grid-area: third;
+    }
+}
+
+
+.box {
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px 10px;
+    position: relative;
+
+}
+
+.box h2 {
+    position: relative;
+    display: inline;
+    float: right;
+    height: 28px;
+    width: 87px;
+    padding: 4px 22px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: -17px -12px 0px 0px;
+
+}
+
+.box p {
+    clear: both;
+    padding-top: 10px;
+    position: relative;
+}
+
+#chicken {
+    background-color: pink;
+}
+
+#beef {
+    background-color: rgb(211, 114, 114);
+
+}
+
+#sushi {
+    background-color: rgb(99, 116, 67);
+
+}
